@@ -1,11 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {MeowNavBar} from './components/MeowNavBar.js'
 import { Home } from './components/Home.js';
+import'./App.css'
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
+     
         <header className="App-header">
           <MeowNavBar/>
         </header>
