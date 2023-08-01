@@ -11,13 +11,15 @@ export const MeowNavBar = () => {
       {['md'].map((expand) => (
         <Navbar key={expand} expand={expand}>
           <Container fluid>
-            {/* <Navbar.Brand href="/">
+            <Navbar.Brand href="/">
                 <img src={logo} height="100px" width="100px" alt='cat logo'/>
-            </Navbar.Brand> */}
+                Purrfect Meowdel
+            </Navbar.Brand>
 
-            <Nav.Link href='/'>
+            {/* <Nav.Link href='/'>
                 <img src={logo} height="100px" width="100px" alt='cat logo'/>
-            </Nav.Link>
+                Purrfect Meowdel
+            </Nav.Link> */}
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
