@@ -1,28 +1,8 @@
-import { Button, Container, Image } from "react-bootstrap";
-import {Row, Col, Card } from 'react-bootstrap';
+import { Button, Container} from "react-bootstrap";
+import {Row, Col } from 'react-bootstrap';
 import landing from '../assets/landingPage.svg';
 import hero from '../assets/hero.svg'
-import anbu from '../assets/anbuLanding.jpg';
-import meow from '../assets/meowLanding.jpg'
-
-
-const blogPosts = [
-    {
-      id: 1,
-      title: 'First Blog Post',
-      content: 'This is the content of the first blog post.',
-      author: 'John Doe',
-      date: 'June 22, 2023'
-    },
-    {
-      id: 2,
-      title: 'Second Blog Post',
-      content: 'This is the content of the second blog post.',
-      author: 'Jane Smith',
-      date: 'June 23, 2023'
-    },
-    // Add more blog posts as needed
-  ];
+import '../styles/Home.css'
 
 
 export const Home = () => {
@@ -34,17 +14,13 @@ export const Home = () => {
                 <Row>
                     <Col md={6} className="d-flex align-items-center">
                         <div>
-                            <h1 className="mb-4">PURRfect MEOWdel</h1>
-                            <p className="mb-4">
-                            Welcome to Purrfect Meowdel, where cat moms rule the roost and feline adventures steal the show! 
-                            Unleash your inner cat lover as we spin whimsical yarns of our purr-fectly charming meowdels and 
-                            their adorable escapades. From mischievous antics to heartwarming moments, this blog is a treasure 
-                            trove of feline tales. Join the paw-ty and embark on a paws-itively delightful journey through the 
-                            lives of our furry, four-legged stars. It's time to get whiskered away by the magic of motherhood and 
-                            whiskers combined!
+                            <h1 id="hero-title" className="mb-5"> <span id="hero-purr">PURR</span>fect <span id="hero-meow">MEOW</span>del</h1>
+                            <p id="hero-paragraph" className="mb-5">
+                            Welcome to Purrfect Meowdel! A whimsical blog celebrating the lives of cat moms and their adorable feline friends. 
+                            Delve into heartwarming stories, playful antics, and the purr-fect bond between mothers and their mischievous meowdels.
                             </p>
 
-                        <Button className="mb-4">Read our Pawsome Tales!</Button>
+                        <Button href="/blog" className="mb-5">Read our Pawsome Tales!</Button>
                         <br/>
                         <img
                                 src={hero}

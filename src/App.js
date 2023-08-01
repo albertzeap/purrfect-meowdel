@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import {MeowNavBar} from './components/MeowNavBar.js'
+
+import {NavBar} from './components/NavBar.js'
 import { Home } from './components/Home.js';
-import'./App.css'
+import { Blog } from './components/Blog.js';
+import'./styles/App.css'
 
 function App() {
   return (
@@ -9,10 +11,11 @@ function App() {
       <div className="App">
      
         <header className="App-header">
-          <MeowNavBar/>
+          <NavBar/>
         </header>
           <Routes>
             <Route path="/" exact element={<Home/>}/>
+            <Route path="/blog" element={<Blog/>}/>
           </Routes>
       </div>
     </BrowserRouter>

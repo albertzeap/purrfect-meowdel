@@ -5,7 +5,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import logo from '../assets/logo.png'
 import { SocialIcon } from 'react-social-icons';
 
-export const MeowNavBar = () => {
+export const NavBar = () => {
   return (
     <>
       {['md'].map((expand) => (
@@ -13,7 +13,7 @@ export const MeowNavBar = () => {
           <Container fluid>
             <Navbar.Brand href="/">
                 <img src={logo} height="100px" width="100px" alt='cat logo'/>
-                Purrfect Meowdel
+                
             </Navbar.Brand>
 
             {/* <Nav.Link href='/'>
@@ -35,8 +35,8 @@ export const MeowNavBar = () => {
               <Offcanvas.Body>
 
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link className="pe-5" href="#action1">Photos</Nav.Link>
-                  <Nav.Link className="pe-5" href="#action2">Blog</Nav.Link>
+                  {/* <Nav.Link className="pe-5" href="#action1">Photos</Nav.Link> */}
+                  <Nav.Link className="pe-5" href="/blog">Blog</Nav.Link>
                   <SocialIcon className="pe" target="_blank" url="https://www.facebook.com/profile.php?id=100094185618902" style={{ height: 35, width: 35 }}/>
                 </Nav>
               </Offcanvas.Body>
