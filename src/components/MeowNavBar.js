@@ -3,16 +3,21 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import logo from '../assets/logo.png'
+import { SocialIcon } from 'react-social-icons';
 
 export const MeowNavBar = () => {
   return (
     <>
       {['md'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+        <Navbar key={expand} expand={expand}>
           <Container fluid>
-            <Navbar.Brand href="/">
+            {/* <Navbar.Brand href="/">
                 <img src={logo} height="100px" width="100px" alt='cat logo'/>
-            </Navbar.Brand>
+            </Navbar.Brand> */}
+
+            <Nav.Link href='/'>
+                <img src={logo} height="100px" width="100px" alt='cat logo'/>
+            </Nav.Link>
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -26,9 +31,11 @@ export const MeowNavBar = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
+
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Photos</Nav.Link>
-                  <Nav.Link href="#action2">Blog</Nav.Link>
+                  <Nav.Link className="pe-5" href="#action1">Photos</Nav.Link>
+                  <Nav.Link className="pe-5" href="#action2">Blog</Nav.Link>
+                  <SocialIcon className="pe" target="_blank" url="https://www.facebook.com/profile.php?id=100094185618902" style={{ height: 35, width: 35 }}/>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

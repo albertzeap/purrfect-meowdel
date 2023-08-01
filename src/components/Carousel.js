@@ -3,10 +3,10 @@ import Carousel from 'react-bootstrap/Carousel';
 export const CatCarousel = () => {
   return (
     <Carousel data-bs-theme="dark">
-      <Carousel.Item interval={1000}>
+      <Carousel.Item interval={3000}>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=373940"
+          src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
           alt="First slide"
         />
         <Carousel.Caption>
