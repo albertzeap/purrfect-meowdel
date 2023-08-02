@@ -1,6 +1,6 @@
 let PROJECT_ID = "ngvsxill";
 let DATASET = "production"
-let QUERY = encodeURIComponent('*[_type == "post"]');
+let QUERY = encodeURIComponent('*[_type == "post"] | order(_createdAt desc)');
 
 const URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
 const imageUrl  = "https://cdn.sanity.io/images/ngvsxill/production/"

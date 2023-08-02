@@ -29,14 +29,14 @@ export const NavBar = () => {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Purrfect Menu
+                <img src={logo} height="100px" width="100px" alt='cat logo'/> Menu
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
 
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   {/* <Nav.Link className="pe-5" href="#action1">Photos</Nav.Link> */}
-                  <Nav.Link className="pe-5" href="/blog">Blog</Nav.Link>
+                  <Nav.Link className="pe-5 mb-4" href="/blog">Blog</Nav.Link>
                   <SocialIcon className="pe" target="_blank" url="https://www.facebook.com/profile.php?id=100094185618902" style={{ height: 35, width: 35 }}/>
                 </Nav>
               </Offcanvas.Body>
