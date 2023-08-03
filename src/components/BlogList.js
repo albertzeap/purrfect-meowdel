@@ -2,16 +2,18 @@ import {Button, Card, Col, Container, Placeholder, Row } from "react-bootstrap"
 import { useEffect, useState } from "react";
 import BlogApi from "../api/BlogApi";
 import moment from 'moment';
+import { BlogPost } from "./BlogPost";
 
 // const imageUrl  = "https://cdn.sanity.io/images/ngvsxill/production/"
 
-export const Blog = () => {
+export const BlogList = () => {
 
 
     const[postData, setPostData] = useState([]);
     const[show, setShow] = useState(false);
+
     useEffect(()=> {
-      BlogApi.getOrders(setPostData);
+      BlogApi.getPosts(setPostData);
 
       setTimeout(() => {
         setShow(true);
@@ -49,8 +51,8 @@ export const Blog = () => {
 
                         {post.body[0].children[0].text}
                       </p>
-                      <Button className="mb-5">Read More!</Button>
-                      <div className="card-footer" >
+                      <Button href= {`/blog/${post._id}`}className="mb-5">Read More!</Button>
+                      <div className="card-footer">
                           <small className="text-muted">
                               Posted on {moment.utc(post.publishedAt).format('MM/DD/YYYY @hh:mm A')}
                           </small>

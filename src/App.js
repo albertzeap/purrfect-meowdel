@@ -2,8 +2,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import {NavBar} from './components/NavBar.js'
 import { Home } from './components/Home.js';
-import { Blog } from './components/Blog.js';
+import { BlogList } from './components/BlogList.js';
 import'./styles/App.css'
+import { BlogPost } from './components/BlogPost.js';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         </header>
           <Routes>
             <Route path="/" exact element={<Home/>}/>
-            <Route path="/blog" element={<Blog/>}/>
+            <Route path="/blogs" element={<BlogList/>}/>
+            <Route path="/blog/:id" element={<BlogPost/>}/>
           </Routes>
       </div>
     </BrowserRouter>

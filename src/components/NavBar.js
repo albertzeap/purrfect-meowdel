@@ -36,7 +36,7 @@ export const NavBar = () => {
 
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   {/* <Nav.Link className="pe-5" href="#action1">Photos</Nav.Link> */}
-                  <Nav.Link className="pe-5 mb-4" href="/blog">Blog</Nav.Link>
+                  <Nav.Link className="pe-5 mb-4" href="/blogs">Blog</Nav.Link>
                   <SocialIcon className="pe" target="_blank" url="https://www.facebook.com/profile.php?id=100094185618902" style={{ height: 35, width: 35 }}/>
                 </Nav>
               </Offcanvas.Body>

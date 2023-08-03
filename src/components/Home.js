@@ -20,7 +20,7 @@ export const Home = () => {
                             Delve into heartwarming stories, playful antics, and the purr-fect bond between mothers and their mischievous meowdels.
                             </p>
 
-                        <Button href="/blog" className="mb-5">Read our Pawsome Tales!</Button>
+                        <Button href="/blogs" className="mb-5">Read our Pawsome Tales!</Button>
                         <br/>
                         <img
                                 src={hero}
