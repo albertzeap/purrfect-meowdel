@@ -8,7 +8,6 @@ import { BlogPost } from './components/BlogPost.js';
 
 function App() {
   return (
-    <BrowserRouter>
       <div className="App">
      
         <header className="App-header">
@@ -20,7 +19,6 @@ function App() {
             <Route path="/blog/:id" element={<BlogPost/>}/>
           </Routes>
       </div>
-    </BrowserRouter>
   );
 }
 

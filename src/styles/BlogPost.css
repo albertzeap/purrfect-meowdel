@@ -2,3 +2,17 @@
 #blogPost{
     background-color: rgb(255, 255, 255);
 }
+
+.bquote{
+    border-left: 3px solid #ccc;
+    font-style: italic;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+}
+
+/* #fbIframe{
+    background-color: rgb(211, 224, 238);
+    height: 15rem;
+} */
+
