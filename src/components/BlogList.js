@@ -14,26 +14,26 @@ export const BlogList = () => {
     const[show, setShow] = useState(false);
 
     useEffect(()=> {
-      BlogApi.getPosts(setPostData);
+      // BlogApi.getPosts(setPostData);
 
       setTimeout(() => {
-        setShow(true);
+        // setShow(true);
       }, 1000);
 
     }, [])
 
     return(
       <>
-        <Container>
-          <h1>Blog Posts</h1>
-          <p>Read some purrfect blogs...</p>
+        <Container className="">
+          <h1 className="fw-bold text-uppercase">Blog Posts</h1>
+          <p className="text-wrap fw-medium fst-italic" style={{width: "50rem"}}>Explore the delightful tales and charming adventures of our whiskered wonders. From heartwarming anecdotes to playful escapades, our cat blog is a treasure trove of feline magic. Dive into the enchanting world of cats and uncover their purrsonal stories shared by devoted cat lovers and fellow paw-rents. Meowvelous reads await you!</p>
         </Container>
 
         <Container>
           
          
             <ListGroup>
-              {postData.map((post, i) => (
+              {postData.map((i,post) => (
 
                 show === true ? (
                   <ListGroup.Item key={i} id="blogListItem" action href={`/blog/${post._id}`} variant="light" className="d-flex justify-content-between align-items-start">
@@ -52,8 +52,7 @@ export const BlogList = () => {
                     <h1>LOADING...</h1>
                   </>
                 )
-
-               
+            
                ))}
             </ListGroup>
 
