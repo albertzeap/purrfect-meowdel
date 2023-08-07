@@ -84,12 +84,11 @@ export const BlogPost = () => {
                                     <div className="d-flex justify-content-center">
                                         <iframe id="mainIframe" className="mt-5 mb-5" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100094185618902&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width={340} height={130} style={{border: "none", overflow: "hidden"}} allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                                     </div>
-                                    <div className="d-flex justify-content-center">
-                                        <h4>Thanks for reading this blog!</h4>
+                                    
+                                    <div id="mainImage"className="d-flex justify-content-center">
+                                        <img className="mt-5 mb-5" src={BlogApi.getImageUrl() + postData[0].mainImage.asset._ref.replace('image-', '').replace('-jpg', '.jpg')} alt="Title" style={{maxHeight: "20rem", maxWidth: "20rem"}}/>
                                     </div>
-                                </div>
-                                <div id="mainImage"className="d-flex justify-content-center">
-                                    <img className="mt-5 mb-5" src={BlogApi.getImageUrl() + postData[0].mainImage.asset._ref.replace('image-', '').replace('-jpg', '.jpg')} alt="Title" style={{maxHeight: "20rem", maxWidth: "20rem"}}/>
+                                   
                                 </div>
                             </Col>
                         </Row>

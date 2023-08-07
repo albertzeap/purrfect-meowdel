@@ -1,0 +1,9 @@
+#blogListItem {
+    border-left: 0px solid white;
+    border-right: 0px solid white; 
+    border-top: 2px solid gray; 
+    border-bottom: 2px solid gray;
+}
+#blogListItem:hover{
+    background-color: rgb(210, 210, 210);
+}
