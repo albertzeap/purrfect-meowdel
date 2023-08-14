@@ -1,4 +1,4 @@
-import {Button, Col, Container, ListGroup, Placeholder, Row } from "react-bootstrap"
+import {Button, Card, Col, Container, ListGroup, Placeholder, Row } from "react-bootstrap"
 import { useEffect, useState } from "react";
 import BlogApi from "../api/BlogApi";
 import moment from 'moment';
@@ -14,10 +14,10 @@ export const BlogList = () => {
     const[show, setShow] = useState(false);
 
     useEffect(()=> {
-      // BlogApi.getPosts(setPostData);
+      BlogApi.getPosts(setPostData);
 
       setTimeout(() => {
-        // setShow(true);
+        setShow(true);
       }, 1000);
 
     }, [])
@@ -29,23 +29,47 @@ export const BlogList = () => {
           <p className="text-wrap fw-medium fst-italic" style={{width: "50rem"}}>Explore the delightful tales and charming adventures of our whiskered wonders. From heartwarming anecdotes to playful escapades, our cat blog is a treasure trove of feline magic. Dive into the enchanting world of cats and uncover their purrsonal stories shared by devoted cat lovers and fellow paw-rents. Meowvelous reads await you!</p>
         </Container>
 
-        <Container>
+        <Container className="mx-auto">
           
          
-            <ListGroup>
-              {postData.map((i,post) => (
+            <Row className="mx-auto">
+              {postData.map((post, i) => (
 
                 show === true ? (
-                  <ListGroup.Item key={i} id="blogListItem" action href={`/blog/${post._id}`} variant="light" className="d-flex justify-content-between align-items-start">
-                    <Container>
-                      <h4 className="text-secondary-emphasis">{post.title}</h4>
-                      <p className="text-muted d-inline-block text-truncate" style={{maxWidth: "300px"}}>{post.body[0].children[0].text}</p>
-                      <p><small className="text-muted">Posted on {moment.utc(post.publishedAt).format('MM/DD/YYYY @hh:mm A')}</small></p>
-                    </Container>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                      <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                    </svg>
-                  </ListGroup.Item>
+                  // <ListGroup.Item key={i} id="blogListItem" action href={`/blog/${post._id}`} variant="light" className="d-flex justify-content-between align-items-start">
+                  //   <Container>
+                  //     <h4 className="text-secondary-emphasis">{post.title}</h4>
+                  //     <p className="text-muted d-inline-block text-truncate" style={{maxWidth: "300px"}}>{post.body[0].children[0].text}</p>
+                  //     <p><small className="text-muted">Posted on {moment.utc(post.publishedAt).format('MM/DD/YYYY @hh:mm A')}</small></p>
+                  //   </Container>
+                  //   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                  //     <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                  //   </svg>
+                  // </ListGroup.Item>
+                  
+                  <Col key={post._id} md={4}>
+                      <div key={post._id} id="productCard" className="card text-center m-3 align-content-center text-white bg-dark" >
+                        <img id="cardImage" className="card-img" src={BlogApi.getImageUrl() + post.mainImage.asset._ref.replace('image-', '').replace('-jpg', '.jpg')} alt="Title"/>
+                          <div className="card-img-overlay">
+                            <div className="card-header">
+                              <h4 id="productName" className="card-title">{post.title}</h4>
+                            </div>
+                            <p className="card-text text-truncate">
+                              {post.body[0].children[0].text}
+                            </p>
+                            <Button href= {`/blog/${post._id}`}className="mb-5">Read More!</Button>
+                            <div className="card-footer">
+                                <small className="">
+                                    Posted on {moment.utc(post.publishedAt).format('MM/DD/YYYY @hh:mm A')}
+                                </small>
+                                
+                              </div>
+                        </div>
+                      </div>
+                    </Col>
+
+
+
 
                 ):(
                   <>
@@ -54,7 +78,7 @@ export const BlogList = () => {
                 )
             
                ))}
-            </ListGroup>
+            </Row>
 
 
 

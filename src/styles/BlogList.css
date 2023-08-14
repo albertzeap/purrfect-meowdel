@@ -1,9 +1,29 @@
 #blogListItem {
-    border-left: 0px solid white;
+    /* border-left: 0px solid white;
     border-right: 0px solid white; 
     border-top: 2px solid gray; 
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid gray; */
+
+    border: none;
 }
-#blogListItem:hover{
+
+#productCard{
+    color: white;
+}
+
+#cardImage{
+    opacity: 0.45;
+}
+/* #blogListItem:hover{
     background-color: rgb(210, 210, 210);
+} */
+
+/* #cardImage{
+    opacity: 0.45;
 }
+
+#cardImageOverlay:hover{
+    background-color: rgb(207,234,249);
+    border-bottom: 20em;
+    height: 50%;
+} */
