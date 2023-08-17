@@ -1,6 +1,9 @@
 
 #blogPost{
     background-color: rgb(255, 255, 255);
+    /* height: 100vh; */
+    font-family: Helvetica, sans-serif;
+    /* background-repeat: repeat ; */
 }
 
 .bquote{
@@ -13,6 +16,18 @@
 
 #fbIframe{
     background-color: rgb(211, 224, 238);
+    border-radius: 2em;
     /* height: 15rem; */
+}
+
+#followPage{
+    border-bottom: 1px solid rgb(183, 178, 178);
+}
+#followText{
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
 }
 

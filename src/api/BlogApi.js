@@ -8,7 +8,7 @@ const imageUrl  = "https://cdn.sanity.io/images/ngvsxill/production/"
 
 const BlogApi = {
 
-    getPosts:(setPostData) => {
+    getPosts:(setPostData, setShow) => {
         let QUERY = encodeURIComponent('*[_type == "post"] | order(_createdAt desc)');
         fetch(URL + QUERY)
         .then((results) => {
@@ -17,11 +17,12 @@ const BlogApi = {
         .then((data) => {
             console.log(data.result);
             setPostData(data.result);
+            setShow(true);
         })
         .catch((error) => console.log(error));
     },
 
-    getPostById:(id, setPostData) => {
+    getPostById:(id, setPostData, setShow) => {
         let QUERY = `*[_id == "${id}"]`
         let QUERY_STRING = encodeURIComponent(QUERY);
         fetch(URL + QUERY_STRING)
@@ -31,6 +32,7 @@ const BlogApi = {
         .then((data) => {
             console.log(data.result);
             setPostData(data.result);
+            setShow(true);
         })
         .catch((error) => console.log(error));
     },

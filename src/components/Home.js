@@ -9,7 +9,7 @@ export const Home = () => {
 
     return(
         <>
-        <div className="bg-wrap h-100">
+        <div className="bg-wrap h-100 mt-5">
             <Container className="">
                 <Row>
                     <Col md={7} className="d-flex align-items-center h-100">

@@ -16,9 +16,7 @@ export const BlogPost = () => {
 
     useEffect(() => {
 
-        BlogApi.getPostById(params.id, setPostData);
-
-
+        BlogApi.getPostById(params.id, setPostData, setShow);
 
 
         const timer = setInterval(() => {
@@ -30,7 +28,7 @@ export const BlogPost = () => {
 
         setTimeout(() => {
             clearInterval(timer);
-            setShow(true);
+            // setShow(true);
             // setShow(false);
 
         }, 2000);
@@ -78,16 +76,19 @@ export const BlogPost = () => {
                                         </Row>
                                     </Container>
                             </Col>
-                            <Col className="d-flex flex-column justify-content-evenly">
+                            <Col className="d-flex flex-column justify-content-between mt-5">
 
                                 <div id="fbIframe" className="d-flex flex-column justify-content-center">
+                                    <div id="followPage" className="d-flex flex-column text-center mt-4">
+                                        <h4 id="followText">Follow Our Page!</h4>
+                                    </div>
                                     <div className="d-flex justify-content-center">
                                         <iframe id="mainIframe" className="mt-5 mb-5" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100094185618902&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width={340} height={130} style={{border: "none", overflow: "hidden"}} allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                                     </div>
                                     
-                                    <div id="mainImage"className="d-flex justify-content-center">
+                                    {/* <div id="mainImage"className="d-flex justify-content-center">
                                         <img className="mt-5 mb-5" src={BlogApi.getImageUrl() + postData[0].mainImage.asset._ref.replace('image-', '').replace('-jpg', '.jpg')} alt="Title" style={{maxHeight: "20rem", maxWidth: "20rem"}}/>
-                                    </div>
+                                    </div> */}
                                    
                                 </div>
                             </Col>

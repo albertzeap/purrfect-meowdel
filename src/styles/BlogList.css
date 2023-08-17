@@ -1,14 +1,26 @@
 #heroSection{
     /* background-color: white; */
     width: 100vw;
-    height: 20vh;
+    height: 50vh;
     margin-bottom: 2rem;
-   background-color: beige;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/blogListHero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#heroContainer{
+    position: absolute;
+    text-align: center;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #pageTitle{
-    color: rgb(73, 126, 206);
-    font-size: 4em;
+    color: rgb(241,234,228);
+    font-size: 3em;
 }
 #pageDescription{
     padding-left: 1rem;
@@ -18,9 +30,11 @@
     border-radius: 2em;
 }
 
+
 #blogListItem {
     border: none;
 }
+
 
 #productCard{
     overflow: hidden;
@@ -65,3 +79,5 @@
 .card-title{
     font-size: 2em;
 }
+
+

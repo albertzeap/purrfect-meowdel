@@ -13,7 +13,7 @@ export const NavBar = () => {
     <>
 
       {['md'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="border-bottom mb-5" sticky="top">
+        <Navbar key={expand} expand={expand} className="border-bottom" sticky="top">
           <Container fluid className="d-flex justify-content-between">
             <Navbar.Brand href="/">
                 <img src={logo} height="100px" width="100px" alt='cat logo'/>
