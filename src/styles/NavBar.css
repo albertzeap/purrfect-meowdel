@@ -1,3 +1,29 @@
 #homeMenuLink{
     text-decoration: none;
+
+}
+
+#blogButton{
+    background-color: #497ece;
+    width: 10rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 2em;
+}
+
+#blogButton:hover{
+    background-color: #d5d841;
+}
+
+#navbarBrandText{
+    font-size: 1rem;
+    font-family: Helvetica, sans-serif;
+}
+
+#navPURR{
+    color: rgb(73, 126, 206);
+}
+
+#navMEOW{
+    color:rgb(204, 206, 87);
 }

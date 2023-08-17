@@ -23,13 +23,21 @@ p{
 #hero-picture{
     border-radius: 1rem;
     border: 2px solid rgb(56, 56, 56);
-    background-color: rgb(207,234,249)
+    background-color: rgb(207,234,249);
     
     /* box-shadow: rgb(133, 133, 211) 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(126, 209, 237) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(232, 220, 160) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(234, 225, 123) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(87, 241, 27) 40px -40px; */
 }
 
+/* #pawPicture{
+    position: absolute;
+    top:100vh;
+    transform: translateY(-100%);
+    
+} */
+
 #callToAction{
     background-color: #497ece;
+    border-radius: 2em;
 }
 
 #callToAction:hover{
