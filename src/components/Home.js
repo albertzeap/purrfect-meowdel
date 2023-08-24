@@ -9,43 +9,55 @@ export const Home = () => {
 
     return(
         <>
-        <div className="bg-wrap h-100 mt-5">
-            <Container className="">
-                <Row>
-                    <Col md={7} className="d-flex align-items-center h-100">
-                        <div className="">
-                            <h1 id="hero-title" className="mb-5 text-uppercase fw-bold"> <span id="hero-purr">PURR</span>fect <span id="hero-meow">MEOW</span>del</h1>
-                            <p id="hero-paragraph" className="mb-5 fw-medium fst-italic w-75">
-                            Welcome to Purrfect Meowdel! A whimsical blog celebrating the lives of cat moms and their adorable feline friends. 
-                            Delve into heartwarming stories, playful antics, and the purr-fect bond between mothers and their mischievous meowdels.
-                            </p>
+        <Container fluid className="bg-wrap">
+                <Container>
 
-                        <Button id="callToAction" href="/blogs" className="mb-5 w-50">Read our Pawsome Tales!</Button>
-                        <br/>
-                        <img
-                                id="pawPicture"
-                                src={hero}
-                                alt="hero"
+                <Row id="landingPageRow">
+
+                    {/* Text Column */}
+                    <Col id="landingPageText" className="d-flex flex-column justify-content-center" role="region" aria-label="landingPageText" >
+                            <Container className="mb-4">
+                                {/* <h5 className="pb-5 text-capitalize fw-bold">Like reading about cats?</h5> */}
+                             
+                                    <h1 id="hero-title" className="text-uppercase fw-bold"><span id="hero-purr">PURR</span>fect <span id="hero-meow">MEOW</span>del</h1>
+                                    <p id="hero-paragraph" className="fw-medium pb-3">
+                                        A whimsical blog celebrating the lives of cat moms and their adorable feline friends. 
+                                    </p>
+
+                                    <Button id="callToAction" className="px-4" href="/blogs" role="button" aria-label="Read our Pawsome Tales Button">Read our Pawsome Tales!</Button>
+                        
+
+                            </Container>
+
+                            <Container>
+                                <img
+                                        id="pawPicture"
+                                        src={hero}
+                                        alt="drawing of cat paws"
+                                        className="img-fluid"
+                                        />
+                            </Container>
+                      
+
+                    </Col>
+
+                    {/* Hero Image Column */}
+                    <Col className="d-flex align-items-center">
+                        <Container className="d-flex justify-content-center align-items-center">
+                            <img
+                                id="hero-picture"
+                                src={landing}
+                                alt="cat with sunglasses and hat with text below it saying so cool"
                                 className="img-fluid"
-                                // height="400rem"
-                                // width="400rem"
-                        />
-                        </div>
+                                />
+                        </Container>
+                    </Col>
 
-                    </Col>
-                    <Col md={5} className="d-flex justify-content-center">
-                    <img
-                        id="hero-picture"
-                        src={landing}
-                        alt="Landing Page"
-                        className="img-fluid"
-                        height="550rem"
-                        width="550rem"
-                        />
-                    </Col>
+
                 </Row>
+    
             </Container>
-        </div>
+        </Container>
     </>
     )
 }

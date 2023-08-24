@@ -13,10 +13,10 @@ export const NavBar = () => {
     <>
 
       {['md'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="border-bottom" sticky="top">
+        <Navbar key={expand} expand={expand}  sticky="top">
           <Container fluid className="d-flex justify-content-between">
             <Navbar.Brand href="/">
-                <img src={logo} height="100px" width="100px" alt='cat logo'/>
+                <img src={logo} height="" width="100px" alt='cat logo'/>
                 <strong id="navbarBrandText"><span id="navPURR">PURRFECT</span> <span id="navMEOW">MEOWDEL.</span></strong>
             </Navbar.Brand>
 
@@ -25,26 +25,28 @@ export const NavBar = () => {
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              // aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  <a id='homeMenuLink' href='/'>
-                    <img src={logo} height="100px" width="100px" alt='cat logo'/> Menu
-                  </a>
+                  <Nav.Link id='homeMenuLink' href='/'role="button" aria-label="Home">
+                    <img src={logo} height="100px" width="100px" alt='cat logo'/> Home
+                  </Nav.Link>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
 
                 <Nav className="justify-content-end flex-grow-1 pe-5">
                   {/* <Nav.Link className="pe-5" href="#action1">Photos</Nav.Link> */}
-                  <Nav.Link className="pe-5 fw-bold" href="/blogs">
-                    <Button id="blogButton" className="">READ BLOGS</Button>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <SocialIcon className="" target="_blank" url="https://www.facebook.com/profile.php?id=100094185618902" style={{ height: 37, width: 37 }}/>
-                  </Nav.Link>
+                  <Nav.Item>
+                    <Nav.Link className="blogLink pe-5 fw-bold" href="/blogs">
+                      <Button id="blogButton" >READ BLOGS</Button>
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item className="d-flex align-items-center">
+                      <SocialIcon className="" target="_blank" url="https://www.facebook.com/profile.php?id=100094185618902" style={{ height: 37, width: 37 }} role="button" aria-label="Facebook Page"/>
+                  </Nav.Item>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

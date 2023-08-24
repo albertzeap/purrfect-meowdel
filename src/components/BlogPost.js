@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BlogApi from "../api/BlogApi";
-import { Button, Card, Col, Container, ProgressBar, Row, Spinner } from "react-bootstrap";
+import { Col, Container, ProgressBar, Row } from "react-bootstrap";
 import moment from 'moment';
 import '../styles/BlogPost.css'
 
@@ -21,7 +21,7 @@ export const BlogPost = () => {
 
         const timer = setInterval(() => {
             setProgressCount((oldProgress) => {
-                if (100 == oldProgress) return 100;
+                if (100 === oldProgress) return 100;
                 return Math.min(oldProgress + 20, 100);
             })
         }, 500)
@@ -39,7 +39,7 @@ export const BlogPost = () => {
         <>
             {show === true ? (
 
-                <div id="blogPost">
+                <Container fluid id="blogPost" className="py-5" role="region" aria-label="blogPost">
                     <Container>
                         <Row>
                             <Col md={2}></Col>
@@ -83,7 +83,7 @@ export const BlogPost = () => {
                                         <h4 id="followText">Follow Our Page!</h4>
                                     </div>
                                     <div className="d-flex justify-content-center">
-                                        <iframe id="mainIframe" className="mt-5 mb-5" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100094185618902&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width={340} height={130} style={{border: "none", overflow: "hidden"}} allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                        <iframe id="mainIframe" className="mt-5 mb-5" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100094185618902&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width={340} height={130} style={{border: "none", overflow: "hidden"}} allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" aria-label="Purrfect Meowdel facebook page banner" title="Facebook"></iframe>
                                     </div>
                                     
                                     {/* <div id="mainImage"className="d-flex justify-content-center">
@@ -94,7 +94,7 @@ export const BlogPost = () => {
                             </Col>
                         </Row>
                     </Container>
-                </div>
+                </Container>
             ):(
                 <>
                     <div>

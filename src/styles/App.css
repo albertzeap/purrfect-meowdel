@@ -3,12 +3,9 @@
 body{
     background-image:url("../assets/background.svg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width: '100vw';
     height: '100vh';
-    /* background-position: 'center'; */
-  
 
     font-family: 'Helvetica', sans-serif;
-    /* opacity: 0.6; */
 }

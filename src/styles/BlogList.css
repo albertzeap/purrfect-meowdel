@@ -36,27 +36,36 @@
 }
 
 
-#productCard{
+.productCard{
     overflow: hidden;
     transition: box-shadow 0.3s ease;
     color: white; 
 }
 
-#cardImage{
+.cardImage{
     opacity: 0.25;
     transition: transform 0.3s ease;
     transform-origin: center center;
 }
 
-#productCard:hover{
+.productCard:hover{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     
 }
 
-#productCard:hover #cardImage{
+.productCard:hover .cardImage{
     transform: scale(1.1);
 }
 
+#readBlogButton{
+    background-color: #f5f5dc;
+    color: #000000;
+    border: none;
+}
+#readBlogButton:hover{
+    background-color: rgb(20, 57, 95);
+    color: white
+}
 /* #imageOverlay{
     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
     transition: background-color 0.3s ease;
@@ -66,15 +75,6 @@
     background: linear-gradient(to bottom, transparent 0%, rgba(245, 245, 220, 0.7) 100%);
 } */
 
-#readBlogButton{
-    background-color: beige;
-    color: black;
-    border: none;
-}
-#readBlogButton:hover{
-    background-color: rgb(20, 57, 95);
-    color: white
-}
 
 .card-title{
     font-size: 2em;
