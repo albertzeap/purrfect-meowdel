@@ -63,8 +63,6 @@ export const BlogList = () => {
                                 href={`/blog/${post._id}`} 
                                 className="readBlogButton mt-2 mb-2"
                                 style={{ 
-                                        backgroundColor: "#f5f5dc",
-                                        color: "#000000",
                                         border: "none",
                                         borderRadius: "2em"
                                       }}
